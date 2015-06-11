@@ -1,0 +1,55 @@
+<use     name="CondFormats/JetMETObjects"/>
+<use     name="rootcintex"/>
+<use     name="root"/>
+<use     name="boost"/>
+<use     name="DataFormats/PatCandidates"/>
+<use     name="DataFormats/FWLite"/>
+<use     name="FWCore/Framework"/>
+<use     name="FWCore/FWLite"/>
+<use     name="CommonTools/Utils"/>
+<use     name="PhysicsTools/Utilities"/>
+<use     name="PhysicsTools/PatUtils"/>
+<use     name="PhysicsTools/PatExamples"/>
+<use     name="PhysicsTools/FWLite"/>
+<use     name="PhysicsTools/SelectorUtils"/>
+<use     name="lhapdf"/> 
+
+#<bin   name="Error" file="Error.cc"></bin>
+
+<bin   name="AnaTau" file="AnaTau.cc"></bin>
+<bin   name="AnaMET" file="AnaMET.cc"></bin>
+
+<bin   name="AnaMonoJet" file="AnaMonoJet.cc"></bin>
+<bin   name="AnaMonoJetCutEff" file="AnaMonoJetCutEff.cc"></bin>
+	
+<bin   name="AnaMuon" file="AnaMuon.cc"></bin>
+<bin   name="AnaMuonCutEff" file="AnaMuonCutEff.cc"></bin>
+<bin   name="AnaMuonTau" file="AnaMuonTau.cc"></bin>
+
+<bin   name="AnaWminus" file="AnaWminus.cc"> </bin>	
+<bin   name="AnaWminusCutEff" file="AnaWminusCutEff.cc"></bin>	
+
+<bin   name="AnaWplus" file="AnaWplus.cc"> </bin>	
+<bin   name="AnaWplusCutEff" file="AnaWplusCutEff.cc"></bin>	
+
+<bin   name="AnaZ" file="AnaZ.cc">  </bin>	
+<bin   name="AnaZCutEff" file="AnaZCutEff.cc"></bin>	
+
+<bin   name="Merge"  file="Merge.cc"></bin>
+<bin   name="Merge2" file="Merge2.cc"></bin>
+<bin   name="Table"  file="Table.cc"></bin>
+<bin   name="TableLep"  file="TableLep.cc"></bin>
+
+#<bin   name="TransferFile" file="TransferFile.cc"></bin>
+
+#<bin   name="SubmitCondor" file="SubmitCondor.cc"> </bin>
+#<bin   name="SkimEvent" file="SkimEvent.cc"> </bin>
+
+#<bin   name="AnaTrigger" file="AnaTrigger.cc"></bin>
+#<bin   name="ProducePyFile" file="ProducePyFile.cc"> </bin>
+#<bin   name="Limit" file="Limit.cc"> </bin>
+
+
+
+
+
