@@ -174,7 +174,6 @@
 
 /// HF Bad Hit
 #include "DataFormats/HcalRecHit/interface/HcalRecHitCollections.h"
-#include "RecoLocalCalo/HcalRecAlgos/interface/HcalCaloFlagLabels.h"
 
 
 /// RBX Noise

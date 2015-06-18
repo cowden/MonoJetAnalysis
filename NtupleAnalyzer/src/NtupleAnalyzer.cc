@@ -46,7 +46,7 @@
 #include "SimDataFormats/GeneratorProducts/interface/GenRunInfoProduct.h"
 #include "DataFormats/Common/interface/ValueMap.h"
 #include "HLTrigger/HLTcore/interface/HLTConfigProvider.h"     
-#include "Cintex/Cintex.h"
+//#include "Cintex/Cintex.h"
 
 using namespace edm;
 using namespace reco;
@@ -1743,30 +1743,34 @@ void NtupleAnalyzer::analyze(const edm::Event& iEvent, const edm::EventSetup& iS
     mMetPx[11]    = pfmets[0].px();
     mMetPy[11]    = pfmets[0].py();
     mMetSumEt[11] = pfmets[0].sumEt();
-    //
-    mMetPt[12]    = pfmets[0].uncorrectedPt(pat::MET::uncorrALL); 
+    // 
+    // CSC removed uncorrected MET values
+    /*mMetPt[12]    = pfmets[0].uncorrectedPt(pat::MET::uncorrALL); 
     mMetPhi[12]   = pfmets[0].uncorrectedPhi(pat::MET::uncorrALL); 
     mMetPx[12]    = pfmets[0].corEx(pat::MET::uncorrALL); 
     mMetPy[12]    = pfmets[0].corEy(pat::MET::uncorrALL); 
-    mMetSumEt[12] = pfmets[0].corSumEt(pat::MET::uncorrALL); 
+    mMetSumEt[12] = pfmets[0].corSumEt(pat::MET::uncorrALL); */
     //
-    mMetPt[13]    = pfmets[0].uncorrectedPt(pat::MET::uncorrJES); 
+    // CSC removed uncorrected MET values
+    /*mMetPt[13]    = pfmets[0].uncorrectedPt(pat::MET::uncorrJES); 
     mMetPhi[13]   = pfmets[0].uncorrectedPhi(pat::MET::uncorrJES); 
     mMetPx[13]    = pfmets[0].corEx(pat::MET::uncorrJES); 
     mMetPy[13]    = pfmets[0].corEy(pat::MET::uncorrJES); 
-    mMetSumEt[13] = pfmets[0].corSumEt(pat::MET::uncorrJES); 
+    mMetSumEt[13] = pfmets[0].corSumEt(pat::MET::uncorrJES); */
     //
-    mMetPt[14]    = pfmets[0].uncorrectedPt(pat::MET::uncorrMUON); 
+    // CSC removed uncorrected MET values
+    /*mMetPt[14]    = pfmets[0].uncorrectedPt(pat::MET::uncorrMUON); 
     mMetPhi[14]   = pfmets[0].uncorrectedPhi(pat::MET::uncorrMUON); 
     mMetPx[14]    = pfmets[0].corEx(pat::MET::uncorrMUON); 
     mMetPy[14]    = pfmets[0].corEy(pat::MET::uncorrMUON); 
-    mMetSumEt[14] = pfmets[0].corSumEt(pat::MET::uncorrMUON); 
+    mMetSumEt[14] = pfmets[0].corSumEt(pat::MET::uncorrMUON); */
     //
-    mMetPt[15]    = pfmets[0].uncorrectedPt(pat::MET::uncorrTAU); 
+    // CSC removed uncorrected MET values
+    /*mMetPt[15]    = pfmets[0].uncorrectedPt(pat::MET::uncorrTAU); 
     mMetPhi[15]   = pfmets[0].uncorrectedPhi(pat::MET::uncorrTAU); 
     mMetPx[15]    = pfmets[0].corEx(pat::MET::uncorrTAU); 
     mMetPy[15]    = pfmets[0].corEy(pat::MET::uncorrTAU); 
-    mMetSumEt[15] = pfmets[0].corSumEt(pat::MET::uncorrTAU); 
+    mMetSumEt[15] = pfmets[0].corSumEt(pat::MET::uncorrTAU); */
   }
   
   
@@ -1784,35 +1788,40 @@ void NtupleAnalyzer::analyze(const edm::Event& iEvent, const edm::EventSetup& iS
     mMetPy[20]    = tcmets[0].py();
     mMetSumEt[20] = tcmets[0].sumEt();
     //
-    mMetPt[21]    = tcmets[0].uncorrectedPt(pat::MET::uncorrNONE); 
+    // CSC removed uncorrected MET values
+    /*mMetPt[21]    = tcmets[0].uncorrectedPt(pat::MET::uncorrNONE); 
     mMetPhi[21]   = tcmets[0].uncorrectedPhi(pat::MET::uncorrNONE); 
     mMetPx[21]    = tcmets[0].corEx(pat::MET::uncorrNONE); 
     mMetPy[21]    = tcmets[0].corEy(pat::MET::uncorrNONE); 
-    mMetSumEt[21] = tcmets[0].corSumEt(pat::MET::uncorrNONE); 
+    mMetSumEt[21] = tcmets[0].corSumEt(pat::MET::uncorrNONE); */
     //
-    mMetPt[22]    = tcmets[0].uncorrectedPt(pat::MET::uncorrALL); 
+    // CSC removed uncorrected MET values
+    /*mMetPt[22]    = tcmets[0].uncorrectedPt(pat::MET::uncorrALL); 
     mMetPhi[22]   = tcmets[0].uncorrectedPhi(pat::MET::uncorrALL); 
     mMetPx[22]    = tcmets[0].corEx(pat::MET::uncorrALL); 
     mMetPy[22]    = tcmets[0].corEy(pat::MET::uncorrALL); 
-    mMetSumEt[22] = tcmets[0].corSumEt(pat::MET::uncorrALL); 
+    mMetSumEt[22] = tcmets[0].corSumEt(pat::MET::uncorrALL); */
     //
-    mMetPt[23]    = tcmets[0].uncorrectedPt(pat::MET::uncorrJES); 
+    // CSC removed uncorrected MET values
+    /*mMetPt[23]    = tcmets[0].uncorrectedPt(pat::MET::uncorrJES); 
     mMetPhi[23]   = tcmets[0].uncorrectedPhi(pat::MET::uncorrJES); 
     mMetPx[23]    = tcmets[0].corEx(pat::MET::uncorrJES); 
     mMetPy[23]    = tcmets[0].corEy(pat::MET::uncorrJES); 
-    mMetSumEt[23] = tcmets[0].corSumEt(pat::MET::uncorrJES); 
+    mMetSumEt[23] = tcmets[0].corSumEt(pat::MET::uncorrJES); */
     //
-    mMetPt[24]    = tcmets[0].uncorrectedPt(pat::MET::uncorrMUON); 
+    // CSC removed uncorrected MET values
+    /*mMetPt[24]    = tcmets[0].uncorrectedPt(pat::MET::uncorrMUON); 
     mMetPhi[24]   = tcmets[0].uncorrectedPhi(pat::MET::uncorrMUON); 
     mMetPx[24]    = tcmets[0].corEx(pat::MET::uncorrMUON); 
     mMetPy[24]    = tcmets[0].corEy(pat::MET::uncorrMUON); 
-    mMetSumEt[24] = tcmets[0].corSumEt(pat::MET::uncorrMUON); 
+    mMetSumEt[24] = tcmets[0].corSumEt(pat::MET::uncorrMUON); */
     //
-    mMetPt[25]    = tcmets[0].uncorrectedPt(pat::MET::uncorrTAU); 
+    // CSC removed uncorrected MET values
+    /*mMetPt[25]    = tcmets[0].uncorrectedPt(pat::MET::uncorrTAU); 
     mMetPhi[25]   = tcmets[0].uncorrectedPhi(pat::MET::uncorrTAU); 
     mMetPx[25]    = tcmets[0].corEx(pat::MET::uncorrTAU); 
     mMetPy[25]    = tcmets[0].corEy(pat::MET::uncorrTAU); 
-    mMetSumEt[25] = tcmets[0].corSumEt(pat::MET::uncorrTAU); 
+    mMetSumEt[25] = tcmets[0].corSumEt(pat::MET::uncorrTAU); */
     
     if(debugMode){
       std::cout<<"TcMET= "<<mMetPt[20]<<", METPhi= "<<mMetPhi[20]<<std::endl;
