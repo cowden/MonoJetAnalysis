@@ -338,7 +338,7 @@ private:
   int     mPFAK4JetNumOfDaughters[MAXJET];
   int     mPFAK4JetIDLOOSE[MAXJET];
   int     mPFAK4JetIDTIGHT[MAXJET];
-  int     mPFAK4JetPUFullJetId[MAXJET];
+  double     mPFAK4JetPUFullJetId[MAXJET];
   int     mPFAK4JetNumOfHFHad[MAXJET];
   int     mPFAK4JetNumOfHFEM[MAXJET];
   //
@@ -1849,7 +1849,8 @@ void NtupleAnalyzer::analyze(const edm::Event& iEvent, const edm::EventSetup& iS
   ///--------------------------------------------------------------------------
    reco::Vertex primaryvtx;
   Handle<reco::VertexCollection> recVtxs;
-  iEvent.getByLabel("offlineSlimmedPrimaryVertices",recVtxs);
+  //iEvent.getByLabel("offlineSlimmedPrimaryVertices",recVtxs);
+  iEvent.getByLabel("goodVertices",recVtxs);
   int  pvind=0;
   for(unsigned int ind=0;ind<recVtxs->size();ind++){
     if(!((*recVtxs)[ind].isFake())){
@@ -2603,7 +2604,7 @@ void NtupleAnalyzer::beginJob()
   mtree->Branch("PFAK4JetNumOfDaughters"                             ,mPFAK4JetNumOfDaughters                             ,"PFAK4JetNumOfDaughters[NPFAK4Jets]/I");
   mtree->Branch("PFAK4JetIDLOOSE"                                    ,mPFAK4JetIDLOOSE                                    ,"PFAK4JetIDLOOSE[NPFAK4Jets]/I");
   mtree->Branch("PFAK4JetIDTIGHT"                                    ,mPFAK4JetIDTIGHT                                    ,"PFAK4JetIDTIGHT[NPFAK4Jets]/I");
-  mtree->Branch("PFAK4JetPUFullJetId"                                ,mPFAK4JetPUFullJetId                                ,"PFAK4JetPUFullJetId[NPFAK4Jets]/I");
+  mtree->Branch("PFAK4JetPUFullJetId"                                ,mPFAK4JetPUFullJetId                                ,"PFAK4JetPUFullJetId[NPFAK4Jets]/D");
   mtree->Branch("PFAK4uncer"                                         ,mPFAK4uncer                                         ,"PFAK4uncer[NPFAK4Jets]/D");
   /// Gen PFAK4 Jets
   mtree->Branch("GenPFAK4JetE"                                       ,mGenPFAK4JetE                                       ,"GenPFAK4JetE[NPFAK4Jets]/D");

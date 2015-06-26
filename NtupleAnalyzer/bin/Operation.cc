@@ -110,9 +110,9 @@ namespace Operation
       if(ev.PFMuonPt(i) > pt && fabs(ev.PFMuonEta(i)) < eta )  
       passKin = true;
       
-      //float dxy     = ev.PFMuondxy(i);
-      //float dz      = ev.PFMuondz(i);
-      //if(fabs(dxy) < 0.02  && fabs(dz) < 1.0 ) passVtx = true;
+      // float dxy     = ev.PFMuondxy(i);
+      // float dz      = ev.PFMuondz(i);
+      // if(fabs(dxy) < 0.02  && fabs(dz) < 1.0 ) passVtx = true;
       //if(ev.PFMuonisGMPT(i) && ev.PFMuonnValidHits(i) >= 11 ) passID = true;
       
       if( ev.PFMuonIsTracker(i)==1 && 
@@ -120,6 +120,7 @@ namespace Operation
       ev.PFMuonNumOfMatches(i)>1  && 
       ev.PFMuonCombChi2Norm(i) < 10.0  &&
       ev.PFMuonTrkDxy(i)< 0.2 && 
+      ev.PFMuonTrkDz(i)< 0.5 && 
       ev.PFMuonTrkValidHits(i) > 10 && 
       ev.PFMuonTrkNumOfValidPixHits(i) > 0  &&  
       ev.PFMuonStandValidHits(i) >0 )  
@@ -521,10 +522,10 @@ namespace Operation
   bool LepInJet2(int i , EventData & ev){
     bool send=false;
     float muonFrac=ev.PFAK4JetMuonEng(i)/ev.PFAK4JetE(i);
-    if(muonFrac>0.5) send=true; // this jet has iso muon
+    if(muonFrac>0.5 && muonFrac < 0.8) send= send || true; // this jet has iso muon
     
     float electFrac=ev.PFAK4JetElecEng(i)/ev.PFAK4JetE(i);
-    if(electFrac>0.5) send=true; // this jet has iso elec
+    if(electFrac>0.5) send= send || true; // this jet has iso elec
     
     return send;
   }
@@ -582,6 +583,67 @@ namespace Operation
     return atan2( Mety,Metx);  
   }
 
+  /// -----------------------------------------------
+  /// JetIso - return true if the jet at index i is isolated from
+  /// leptons (e, mu, photon)
+  bool JetIso( int ind, EventData &ev ) {
+
+    // get the jet properties
+    const double jEta = ev.PFAK4JetEta(ind);
+    const double jPhi = ev.PFAK4JetPhi(ind);
+   
+    // electron isolation
+    for ( int i =0; i < ev.NPFElec(); i++ ) {
+      const double eEta = ev.PFElecEta(i);
+      const double ePhi = ev.PFElecPhi(i);
+
+      const double dR = deltaR(jEta,jPhi,eEta,ePhi);
+
+      if ( dR < 0.4 ) return false;
+
+    }
+
+    // muon isolation
+    for ( int i =0; i < ev.NPFMuon(); i++ ) {
+      const double mEta = ev.PFMuonEta(i);
+      const double mPhi = ev.PFMuonPhi(i);
+
+      const double dR = deltaR(jEta,jPhi,mEta,mPhi);
+
+      if ( dR < 0.4 ) return false;
+    }
+
+    
+    // photon isolation 
+    for ( int i=0; i < ev.NPhot(); i++ ) {
+      const double pEta = ev.PhotEta(i);
+      const double pPhi = ev.PhotPhi(i);
+
+      const double dR = deltaR(jEta,jPhi,pEta,pPhi);
+
+      if ( dR < 0.4 ) return false;
+    }
+
+    return true;
+  }
+
+
+  /// ------------------------------------------------
+  /// Return Jet PuId valuation for the ith jet
+  /// Apply eta dependent cuts to PFAK4JetsPUFullJetId
+  bool JetPuId(int ind, EventData & ev) {
+    const double jeta = fabs(ev.PFAK4JetEta(ind));
+    const double jpu = ev.PFAK4JetPUFullJetId(ind);
+
+    if ( jeta < 2.5 && jpu > -0.63 ) return true;
+    else if ( jeta >= 2.5 && jeta < 2.75 && jpu > -0.6 ) return true;
+    else if ( jeta >= 2.75 && jeta < 3.0 && jpu > -0.55 ) return true;
+    else if ( jeta >= 3.0 && jeta < 5.0 && jpu > -0.45 ) return true;
+
+    return false;
+
+  }
+
   
   /// ----------------------------------------------
   /// JetIndex Selection
@@ -600,8 +662,12 @@ namespace Operation
       int njets=0;
       for (int i=0; i<ev.NPFAK4Jets(); i++){
 	if( ev.PFAK4JetPtCor(i)>ev.SecJetCut() 
-	    && abs(ev.PFAK4JetEta(i))< 4.5
-	    && LepInJet2(i , ev )==false 
+	    && fabs(ev.PFAK4JetEta(i))< 2.5
+	    //&& LepInJet2(i , ev )==false
+	    //&& JetIso(i, ev)
+	    && ev.PFAK4JetNeuHadEngFrac(i)<0.7
+            && ev.PFAK4JetNeuEmEngFrac(i)<0.9 
+	    && JetPuId(i, ev )
 	    //&& ev.PFAK4JetIDLOOSE(i) > 0
 	    ){
 	  if(njets==ind)send=i;
@@ -1049,6 +1115,22 @@ namespace Operation
     return ostrm;
   }
 
+
+  // ----------------------------------------------------
+  // GoodVertexCut  Select events which have a good vertex
+  // Currently the "goodVertices" collection is created by an EDFilter and 
+  // the branches in the ntuple are populated from this collection.  So,
+  // we just accept events which have at least one vertex.
+  bool GoodVertexCut::Process(EventData & ed) {
+    if ( ed.NPV() > 0 ) return true;
+    return false;
+  }
+
+  std::ostream &  GoodVertexCut::Description(std::ostream & ostrm) {
+    ostrm <<  "  Requiring at least 1 good vertex";
+    return ostrm;
+  }
+
   
   /// ----------------------------------------------
   /// ABnormal Events
@@ -1250,8 +1332,14 @@ namespace Operation
     }
     else if(ev.JetType()=="pf"){
       int ixjet1= JetIndex(0, ev);
-      if( ixjet1<99 &&  ev.PFAK4JetPtCor(ixjet1)>mJetPt && abs(ev.PFAK4JetEta(ixjet1))<mJetEta ){
-	send=true;
+      if( ixjet1<99 &&  ev.PFAK4JetPtCor(ixjet1)>mJetPt 
+         && fabs(ev.PFAK4JetEta(ixjet1))<mJetEta 
+	 && ev.PFAK4JetChaHadEngFrac(ixjet1)>0.2 
+	 && ev.PFAK4JetNeuHadEngFrac(ixjet1)<0.7
+	 && ev.PFAK4JetNeuEmEngFrac(ixjet1)<0.7
+       ){
+	//send=true;
+ 	return true;
       }
     }
     else if(ev.JetType()=="widepf"){
@@ -1980,12 +2068,13 @@ namespace Operation
     int ntaus = 0;
     if(mPF==1){
       for(int i = 0; i < ev.NPFTau(); i++){
-	if(ev.PFTauPt(i) < 20.0) continue;
-	if(fabs(ev.PFTauEta(i)) > 2.3) continue;
-	if(ev.PFTauDisByLooseCombinedIsolationDeltaBetaCorr(i) < 0.5) continue; 
-	if(ev.PFTauDisDecayModeFinding(i) < 0.5) continue;
-	if(mAgainstLepton==1 && ev.PFTauDisAgainstElectronLoose(i)<0.5) continue;
-	if(mAgainstLepton==1 && ev.PFTauDisAgainstMuonTight2(i)<0.5) continue;
+	if(ev.PFTauPt(i) < 18.0) continue;          // Run1: 20 GeV  Run2:  18 GeV
+	if(fabs(ev.PFTauEta(i)) > 2.3) continue;    // Run1: 2.3,    Run2: 2.3
+	//  if(ev.PFTauDisByLooseCombinedIsolationDeltaBetaCorr(i) < 0.5) continue;  // Run 1 cut (not available in miniAOD. 
+	if(ev.PFTauDisByLooseCombinedIsolationDeltaBetaCorr3Hits(i) < 5.0) continue;  // Run 2 EA recommended  5 GeV
+	if(ev.PFTauDisDecayModeFinding(i) < 0.5) continue;     // Run1 cut and Run 2 EA recomended  
+	//    if(mAgainstLepton==1 && ev.PFTauDisAgainstElectronLoose(i)<0.5) continue;   //  Run 1 cut
+	//    if(mAgainstLepton==1 && ev.PFTauDisAgainstMuonTight2(i)<0.5) continue;  // Run 1 cut
 	ntaus++;
       }
     }

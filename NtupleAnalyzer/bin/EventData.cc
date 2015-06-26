@@ -48,9 +48,310 @@ EventData::EventData(const string &  fileName, UInt_t maxEvents, int isMC) : mDa
   mylumi["m1avpu40bx25"]          = 19712.;
 
 
+ // W_test
+  mydataset["W_test"]        ="file:/home/sundleeb/DM15ana/CMSSW_7_4_0_pre6/src/MonoJetAnalysis/NtupleAnalyzer/test/config/test/step4_ntuple_NonThDM_Wtest.root";
+
+  mylumi["W_test"]         = 4958./3.33;  
+
+// Sync Exercise Added by Sonaina on 17-june 2015 ....
+  mydataset["ADD_sync"]      ="file:/media/sf_proj/Monojets/ntuples/ntuple_ADD_Synch.root";
+
+  mylumi["ADD_sync"]     = 1;
+
+  mydataset["TTbar_sync"]   ="file:/media/sf_proj/Monojets/ntuples/ntuple_TTbar_Synch.root";
+
+  mylumi["TTbar_sync"]     =1;
+
+
+
   // NonTh
-  mydataset["nonthdm"]      = "file:/home/sundleeb/DM15ana/CMSSW_7_4_0_pre6/src/MonoJetAnalysis/NtupleAnalyzer/test/config/test/ntuple_newNtupleAnalyzer/step4_ntuple_NonThDM_3TeV_1.root";
-  mylumi["nonthdm"]         = 19712.;
+  mydataset["nonth1TeVrun56"]      = "file:/home/sundleeb/DM15ana/CMSSW_7_4_0_pre6/src/MonoJetAnalysis/NtupleAnalyzer/test/config/test/step4_ntuple_NonThDM_1TeV_run56.root";
+  mylumi["nonth1TeVrun56"]         = 1000./3.33;
+
+  mydataset["nonth1TeVrun34"]="/home/sundleeb/DM15ana/CMSSW_7_4_0_pre6/src/MonoJetAnalysis/NtupleAnalyzer/test/config/test/step4_ntuple_NonThDM_1TeV_run34.root";
+  mydataset["nonth2TeVrun34"]="/home/sundleeb/DM15ana/CMSSW_7_4_0_pre6/src/MonoJetAnalysis/NtupleAnalyzer/test/config/test/step4_ntuple_NonThDM_2TeV_run34.root";
+  mydataset["nonth2TeVrun56"]="/home/sundleeb/DM15ana/CMSSW_7_4_0_pre6/src/MonoJetAnalysis/NtupleAnalyzer/test/config/test/step4_ntuple_NonThDM_2TeV_run56.root";
+  mydataset["nonth3TeVrun34"]="/home/sundleeb/DM15ana/CMSSW_7_4_0_pre6/src/MonoJetAnalysis/NtupleAnalyzer/test/config/test/step4_ntuple_NonThDM_3TeV_run34.root";
+  mydataset["nonth3TeVrun56"]="/home/sundleeb/DM15ana/CMSSW_7_4_0_pre6/src/MonoJetAnalysis/NtupleAnalyzer/test/config/test/step4_ntuple_NonThDM_3TeV_run56.root";
+  mydataset["nonth0.5TeVrun34"]="/home/sundleeb/DM15ana/CMSSW_7_4_0_pre6/src/MonoJetAnalysis/NtupleAnalyzer/test/config/test/step4_ntuple_NonThDM_500GeV_run34.root";
+  mydataset["nonth0.5TeVrun56"]="/home/sundleeb/DM15ana/CMSSW_7_4_0_pre6/src/MonoJetAnalysis/NtupleAnalyzer/test/config/test/step4_ntuple_NonThDM_500GeV_run56.root";
+
+  mydataset["nonth1TeV1"]="/home/sundleeb/DM15ana/CMSSW_7_4_0_pre6/src/MonoJetAnalysis/NtupleAnalyzer/test/config/test/ntuple_newNtupleAnalyzer/step4_ntuple_NonThDM_1TeV_1.root";
+  mydataset["nonth1TeV2"]="/home/sundleeb/DM15ana/CMSSW_7_4_0_pre6/src/MonoJetAnalysis/NtupleAnalyzer/test/config/test/ntuple_newNtupleAnalyzer/step4_ntuple_NonThDM_1TeV_2.root";
+  mydataset["nonth1TeV3"]="/home/sundleeb/DM15ana/CMSSW_7_4_0_pre6/src/MonoJetAnalysis/NtupleAnalyzer/test/config/test/ntuple_newNtupleAnalyzer/step4_ntuple_NonThDM_1TeV_3.root";
+  mydataset["nonth1TeV4"]="/home/sundleeb/DM15ana/CMSSW_7_4_0_pre6/src/MonoJetAnalysis/NtupleAnalyzer/test/config/test/ntuple_newNtupleAnalyzer/step4_ntuple_NonThDM_1TeV_4.root";
+
+  mydataset["nonth1TeVrun34v2"]="/home/sundleeb/DM15ana/CMSSW_7_4_0_pre6/src/MonoJetAnalysis/NtupleAnalyzer/test/config/test/step4_ntuple_NonThDM_1TeV_run34_v2.root";
+  mydataset["nonth1TeVrun56v2"]="/home/sundleeb/DM15ana/CMSSW_7_4_0_pre6/src/MonoJetAnalysis/NtupleAnalyzer/test/config/test/step4_ntuple_NonThDM_1TeV_run56_v2.root";
+  mydataset["nonth2TeVrun34v2"]="/home/sundleeb/DM15ana/CMSSW_7_4_0_pre6/src/MonoJetAnalysis/NtupleAnalyzer/test/config/test/step4_ntuple_NonThDM_2TeV_run34_v2.root";
+  mydataset["nonth2TeVrun56v2"]="/home/sundleeb/DM15ana/CMSSW_7_4_0_pre6/src/MonoJetAnalysis/NtupleAnalyzer/test/config/test/step4_ntuple_NonThDM_2TeV_run56_v2.root";
+  mydataset["nonth3TeVrun34v2"]="/home/sundleeb/DM15ana/CMSSW_7_4_0_pre6/src/MonoJetAnalysis/NtupleAnalyzer/test/config/test/step4_ntuple_NonThDM_3TeV_run34_v2.root";
+  mydataset["nonth3TeVrun56v2"]="/home/sundleeb/DM15ana/CMSSW_7_4_0_pre6/src/MonoJetAnalysis/NtupleAnalyzer/test/config/test/step4_ntuple_NonThDM_3TeV_run56_v2.root";
+  mydataset["nonth0.5TeVrun34v2"]="/home/sundleeb/DM15ana/CMSSW_7_4_0_pre6/src/MonoJetAnalysis/NtupleAnalyzer/test/config/test/step4_ntuple_NonThDM_500GeV_run34_v2.root";
+  mydataset["nonth0.5TeVrun56v2"]="/home/sundleeb/DM15ana/CMSSW_7_4_0_pre6/src/MonoJetAnalysis/NtupleAnalyzer/test/config/test/step4_ntuple_NonThDM_500GeV_run56_v2.root";
+
+  mydataset["nonTh1TeV_01_v2"]="/lustre/scratch/sundleeb/CMSSW_7_4_0_pre6/src/MonoJetAnalysis/NtupleAnalyzer/test/config/test/data/step4_ntuple_NonThDM_1000_GeV_run_01_v2.root";
+  mydataset["nonTh1TeV_02_v2"]="/lustre/scratch/sundleeb/CMSSW_7_4_0_pre6/src/MonoJetAnalysis/NtupleAnalyzer/test/config/test/data/step4_ntuple_NonThDM_1000_GeV_run_02_v2.root";
+  mydataset["nonTh1TeV_03_v2"]="/lustre/scratch/sundleeb/CMSSW_7_4_0_pre6/src/MonoJetAnalysis/NtupleAnalyzer/test/config/test/data/step4_ntuple_NonThDM_1000_GeV_run_03_v2.root";
+  mydataset["nonTh1TeV_04_v2"]="/lustre/scratch/sundleeb/CMSSW_7_4_0_pre6/src/MonoJetAnalysis/NtupleAnalyzer/test/config/test/data/step4_ntuple_NonThDM_1000_GeV_run_04_v2.root";
+  mydataset["nonTh1TeV_05_v2"]="/lustre/scratch/sundleeb/CMSSW_7_4_0_pre6/src/MonoJetAnalysis/NtupleAnalyzer/test/config/test/data/step4_ntuple_NonThDM_1000_GeV_run_05_v2.root";
+  mydataset["nonTh1TeV_06_v2"]="/lustre/scratch/sundleeb/CMSSW_7_4_0_pre6/src/MonoJetAnalysis/NtupleAnalyzer/test/config/test/data/step4_ntuple_NonThDM_1000_GeV_run_06_v2.root";
+  mydataset["nonTh1TeV_07_v2"]="/lustre/scratch/sundleeb/CMSSW_7_4_0_pre6/src/MonoJetAnalysis/NtupleAnalyzer/test/config/test/data/step4_ntuple_NonThDM_1000_GeV_run_07_v2.root";
+  mydataset["nonTh1TeV_08_v2"]="/lustre/scratch/sundleeb/CMSSW_7_4_0_pre6/src/MonoJetAnalysis/NtupleAnalyzer/test/config/test/data/step4_ntuple_NonThDM_1000_GeV_run_08_v2.root";
+  mydataset["nonTh1TeV_09_v2"]="/lustre/scratch/sundleeb/CMSSW_7_4_0_pre6/src/MonoJetAnalysis/NtupleAnalyzer/test/config/test/data/step4_ntuple_NonThDM_1000_GeV_run_09_v2.root";
+  mydataset["nonTh1TeV_10_v2"]="/lustre/scratch/sundleeb/CMSSW_7_4_0_pre6/src/MonoJetAnalysis/NtupleAnalyzer/test/config/test/data/step4_ntuple_NonThDM_1000_GeV_run_10_v2.root";
+  mydataset["nonTh1TeV_11_v2"]="/lustre/scratch/sundleeb/CMSSW_7_4_0_pre6/src/MonoJetAnalysis/NtupleAnalyzer/test/config/test/data/step4_ntuple_NonThDM_1000_GeV_run_11_v2.root";
+  mydataset["nonTh1TeV_12_v2"]="/lustre/scratch/sundleeb/CMSSW_7_4_0_pre6/src/MonoJetAnalysis/NtupleAnalyzer/test/config/test/data/step4_ntuple_NonThDM_1000_GeV_run_12_v2.root";
+  mydataset["nonTh1TeV_13_v2"]="/lustre/scratch/sundleeb/CMSSW_7_4_0_pre6/src/MonoJetAnalysis/NtupleAnalyzer/test/config/test/data/step4_ntuple_NonThDM_1000_GeV_run_13_v2.root";
+  mydataset["nonTh1TeV_14_v2"]="/lustre/scratch/sundleeb/CMSSW_7_4_0_pre6/src/MonoJetAnalysis/NtupleAnalyzer/test/config/test/data/step4_ntuple_NonThDM_1000_GeV_run_14_v2.root";
+  mydataset["nonTh1TeV_15_v2"]="/lustre/scratch/sundleeb/CMSSW_7_4_0_pre6/src/MonoJetAnalysis/NtupleAnalyzer/test/config/test/data/step4_ntuple_NonThDM_1000_GeV_run_15_v2.root";
+  mydataset["nonTh1TeV_16_v2"]="/lustre/scratch/sundleeb/CMSSW_7_4_0_pre6/src/MonoJetAnalysis/NtupleAnalyzer/test/config/test/data/step4_ntuple_NonThDM_1000_GeV_run_16_v2.root";
+  mydataset["nonTh1TeV_17_v2"]="/lustre/scratch/sundleeb/CMSSW_7_4_0_pre6/src/MonoJetAnalysis/NtupleAnalyzer/test/config/test/data/step4_ntuple_NonThDM_1000_GeV_run_17_v2.root";
+  mydataset["nonTh1TeV_18_v2"]="/lustre/scratch/sundleeb/CMSSW_7_4_0_pre6/src/MonoJetAnalysis/NtupleAnalyzer/test/config/test/data/step4_ntuple_NonThDM_1000_GeV_run_18_v2.root";
+  mydataset["nonTh1TeV_19_v2"]="/lustre/scratch/sundleeb/CMSSW_7_4_0_pre6/src/MonoJetAnalysis/NtupleAnalyzer/test/config/test/data/step4_ntuple_NonThDM_1000_GeV_run_19_v2.root";
+  mydataset["nonTh1TeV_20_v2"]="/lustre/scratch/sundleeb/CMSSW_7_4_0_pre6/src/MonoJetAnalysis/NtupleAnalyzer/test/config/test/data/step4_ntuple_NonThDM_1000_GeV_run_20_v2.root";
+  mydataset["nonTh1TeV_21_v2"]="/lustre/scratch/sundleeb/CMSSW_7_4_0_pre6/src/MonoJetAnalysis/NtupleAnalyzer/test/config/test/data/step4_ntuple_NonThDM_1000_GeV_run_21_v2.root";
+  mydataset["nonTh1TeV_22_v2"]="/lustre/scratch/sundleeb/CMSSW_7_4_0_pre6/src/MonoJetAnalysis/NtupleAnalyzer/test/config/test/data/step4_ntuple_NonThDM_1000_GeV_run_22_v2.root";
+  mydataset["nonTh1TeV_23_v2"]="/lustre/scratch/sundleeb/CMSSW_7_4_0_pre6/src/MonoJetAnalysis/NtupleAnalyzer/test/config/test/data/step4_ntuple_NonThDM_1000_GeV_run_23_v2.root";
+  mydataset["nonTh1TeV_24_v2"]="/lustre/scratch/sundleeb/CMSSW_7_4_0_pre6/src/MonoJetAnalysis/NtupleAnalyzer/test/config/test/data/step4_ntuple_NonThDM_1000_GeV_run_24_v2.root";
+  mydataset["nonTh1TeV_25_v2"]="/lustre/scratch/sundleeb/CMSSW_7_4_0_pre6/src/MonoJetAnalysis/NtupleAnalyzer/test/config/test/data/step4_ntuple_NonThDM_1000_GeV_run_25_v2.root";
+  mydataset["nonTh1TeV_26_v2"]="/lustre/scratch/sundleeb/CMSSW_7_4_0_pre6/src/MonoJetAnalysis/NtupleAnalyzer/test/config/test/data/step4_ntuple_NonThDM_1000_GeV_run_26_v2.root";
+  mydataset["nonTh1TeV_27_v2"]="/lustre/scratch/sundleeb/CMSSW_7_4_0_pre6/src/MonoJetAnalysis/NtupleAnalyzer/test/config/test/data/step4_ntuple_NonThDM_1000_GeV_run_27_v2.root";
+  mydataset["nonTh1TeV_28_v2"]="/lustre/scratch/sundleeb/CMSSW_7_4_0_pre6/src/MonoJetAnalysis/NtupleAnalyzer/test/config/test/data/step4_ntuple_NonThDM_1000_GeV_run_28_v2.root";
+  mydataset["nonTh1TeV_29_v2"]="/lustre/scratch/sundleeb/CMSSW_7_4_0_pre6/src/MonoJetAnalysis/NtupleAnalyzer/test/config/test/data/step4_ntuple_NonThDM_1000_GeV_run_29_v2.root";
+  mydataset["nonTh1TeV_30_v2"]="/lustre/scratch/sundleeb/CMSSW_7_4_0_pre6/src/MonoJetAnalysis/NtupleAnalyzer/test/config/test/data/step4_ntuple_NonThDM_1000_GeV_run_30_v2.root";
+  mydataset["nonTh1TeV_31_v2"]="/lustre/scratch/sundleeb/CMSSW_7_4_0_pre6/src/MonoJetAnalysis/NtupleAnalyzer/test/config/test/data/step4_ntuple_NonThDM_1000_GeV_run_31_v2.root";
+  mydataset["nonTh1TeV_32_v2"]="/lustre/scratch/sundleeb/CMSSW_7_4_0_pre6/src/MonoJetAnalysis/NtupleAnalyzer/test/config/test/data/step4_ntuple_NonThDM_1000_GeV_run_32_v2.root";
+  mydataset["nonTh1TeV_33_v2"]="/lustre/scratch/sundleeb/CMSSW_7_4_0_pre6/src/MonoJetAnalysis/NtupleAnalyzer/test/config/test/data/step4_ntuple_NonThDM_1000_GeV_run_33_v2.root";
+  mydataset["nonTh1TeV_34_v2"]="/lustre/scratch/sundleeb/CMSSW_7_4_0_pre6/src/MonoJetAnalysis/NtupleAnalyzer/test/config/test/data/step4_ntuple_NonThDM_1000_GeV_run_34_v2.root";
+  mydataset["nonTh1TeV_35_v2"]="/lustre/scratch/sundleeb/CMSSW_7_4_0_pre6/src/MonoJetAnalysis/NtupleAnalyzer/test/config/test/data/step4_ntuple_NonThDM_1000_GeV_run_35_v2.root";
+  mydataset["nonTh1TeV_36_v2"]="/lustre/scratch/sundleeb/CMSSW_7_4_0_pre6/src/MonoJetAnalysis/NtupleAnalyzer/test/config/test/data/step4_ntuple_NonThDM_1000_GeV_run_36_v2.root";
+  mydataset["nonTh1TeV_37_v2"]="/lustre/scratch/sundleeb/CMSSW_7_4_0_pre6/src/MonoJetAnalysis/NtupleAnalyzer/test/config/test/data/step4_ntuple_NonThDM_1000_GeV_run_37_v2.root";
+  mydataset["nonTh1TeV_38_v2"]="/lustre/scratch/sundleeb/CMSSW_7_4_0_pre6/src/MonoJetAnalysis/NtupleAnalyzer/test/config/test/data/step4_ntuple_NonThDM_1000_GeV_run_38_v2.root";
+  mydataset["nonTh1TeV_39_v2"]="/lustre/scratch/sundleeb/CMSSW_7_4_0_pre6/src/MonoJetAnalysis/NtupleAnalyzer/test/config/test/data/step4_ntuple_NonThDM_1000_GeV_run_39_v2.root";
+  mydataset["nonTh1TeV_40_v2"]="/lustre/scratch/sundleeb/CMSSW_7_4_0_pre6/src/MonoJetAnalysis/NtupleAnalyzer/test/config/test/data/step4_ntuple_NonThDM_1000_GeV_run_40_v2.root";
+  mydataset["nonTh1TeV_41_v2"]="/lustre/scratch/sundleeb/CMSSW_7_4_0_pre6/src/MonoJetAnalysis/NtupleAnalyzer/test/config/test/data/step4_ntuple_NonThDM_1000_GeV_run_41_v2.root";
+  mydataset["nonTh1TeV_42_v2"]="/lustre/scratch/sundleeb/CMSSW_7_4_0_pre6/src/MonoJetAnalysis/NtupleAnalyzer/test/config/test/data/step4_ntuple_NonThDM_1000_GeV_run_42_v2.root";
+  mydataset["nonTh1TeV_44_v2"]="/lustre/scratch/sundleeb/CMSSW_7_4_0_pre6/src/MonoJetAnalysis/NtupleAnalyzer/test/config/test/data/step4_ntuple_NonThDM_1000_GeV_run_44_v2.root";
+  mydataset["nonTh1TeV_45_v2"]="/lustre/scratch/sundleeb/CMSSW_7_4_0_pre6/src/MonoJetAnalysis/NtupleAnalyzer/test/config/test/data/step4_ntuple_NonThDM_1000_GeV_run_45_v2.root";
+  mydataset["nonTh1TeV_46_v2"]="/lustre/scratch/sundleeb/CMSSW_7_4_0_pre6/src/MonoJetAnalysis/NtupleAnalyzer/test/config/test/data/step4_ntuple_NonThDM_1000_GeV_run_46_v2.root";
+  mydataset["nonTh1TeV_48_v2"]="/lustre/scratch/sundleeb/CMSSW_7_4_0_pre6/src/MonoJetAnalysis/NtupleAnalyzer/test/config/test/data/step4_ntuple_NonThDM_1000_GeV_run_48_v2.root";
+  mydataset["nonTh1TeV_49_v2"]="/lustre/scratch/sundleeb/CMSSW_7_4_0_pre6/src/MonoJetAnalysis/NtupleAnalyzer/test/config/test/data/step4_ntuple_NonThDM_1000_GeV_run_49_v2.root";
+  mydataset["nonTh1TeV_50_v2"]="/lustre/scratch/sundleeb/CMSSW_7_4_0_pre6/src/MonoJetAnalysis/NtupleAnalyzer/test/config/test/data/step4_ntuple_NonThDM_1000_GeV_run_50_v2.root";
+  mydataset["nonTh1TeV_51_v2"]="/lustre/scratch/sundleeb/CMSSW_7_4_0_pre6/src/MonoJetAnalysis/NtupleAnalyzer/test/config/test/data/step4_ntuple_NonThDM_1000_GeV_run_51_v2.root";
+  mydataset["nonTh1TeV_52_v2"]="/lustre/scratch/sundleeb/CMSSW_7_4_0_pre6/src/MonoJetAnalysis/NtupleAnalyzer/test/config/test/data/step4_ntuple_NonThDM_1000_GeV_run_52_v2.root";
+  mydataset["nonTh1TeV_53_v2"]="/lustre/scratch/sundleeb/CMSSW_7_4_0_pre6/src/MonoJetAnalysis/NtupleAnalyzer/test/config/test/data/step4_ntuple_NonThDM_1000_GeV_run_53_v2.root";
+  mydataset["nonTh1TeV_54_v2"]="/lustre/scratch/sundleeb/CMSSW_7_4_0_pre6/src/MonoJetAnalysis/NtupleAnalyzer/test/config/test/data/step4_ntuple_NonThDM_1000_GeV_run_54_v2.root";
+  mydataset["nonTh1TeV_55_v2"]="/lustre/scratch/sundleeb/CMSSW_7_4_0_pre6/src/MonoJetAnalysis/NtupleAnalyzer/test/config/test/data/step4_ntuple_NonThDM_1000_GeV_run_55_v2.root";
+  mydataset["nonTh1TeV_56_v2"]="/lustre/scratch/sundleeb/CMSSW_7_4_0_pre6/src/MonoJetAnalysis/NtupleAnalyzer/test/config/test/data/step4_ntuple_NonThDM_1000_GeV_run_56_v2.root";
+  mydataset["nonTh1TeV_57_v2"]="/lustre/scratch/sundleeb/CMSSW_7_4_0_pre6/src/MonoJetAnalysis/NtupleAnalyzer/test/config/test/data/step4_ntuple_NonThDM_1000_GeV_run_57_v2.root";
+  mydataset["nonTh1TeV_58_v2"]="/lustre/scratch/sundleeb/CMSSW_7_4_0_pre6/src/MonoJetAnalysis/NtupleAnalyzer/test/config/test/data/step4_ntuple_NonThDM_1000_GeV_run_58_v2.root";
+  mydataset["nonTh1TeV_59_v2"]="/lustre/scratch/sundleeb/CMSSW_7_4_0_pre6/src/MonoJetAnalysis/NtupleAnalyzer/test/config/test/data/step4_ntuple_NonThDM_1000_GeV_run_59_v2.root";
+  mydataset["nonTh1TeV_60_v2"]="/lustre/scratch/sundleeb/CMSSW_7_4_0_pre6/src/MonoJetAnalysis/NtupleAnalyzer/test/config/test/data/step4_ntuple_NonThDM_1000_GeV_run_60_v2.root";
+  mydataset["nonTh1TeV_61_v2"]="/lustre/scratch/sundleeb/CMSSW_7_4_0_pre6/src/MonoJetAnalysis/NtupleAnalyzer/test/config/test/data/step4_ntuple_NonThDM_1000_GeV_run_61_v2.root";
+  mydataset["nonTh1TeV_62_v2"]="/lustre/scratch/sundleeb/CMSSW_7_4_0_pre6/src/MonoJetAnalysis/NtupleAnalyzer/test/config/test/data/step4_ntuple_NonThDM_1000_GeV_run_62_v2.root";
+  mydataset["nonTh1TeV_63_v2"]="/lustre/scratch/sundleeb/CMSSW_7_4_0_pre6/src/MonoJetAnalysis/NtupleAnalyzer/test/config/test/data/step4_ntuple_NonThDM_1000_GeV_run_63_v2.root";
+  mydataset["nonTh1TeV_64_v2"]="/lustre/scratch/sundleeb/CMSSW_7_4_0_pre6/src/MonoJetAnalysis/NtupleAnalyzer/test/config/test/data/step4_ntuple_NonThDM_1000_GeV_run_64_v2.root";
+  mydataset["nonTh1TeV_65_v2"]="/lustre/scratch/sundleeb/CMSSW_7_4_0_pre6/src/MonoJetAnalysis/NtupleAnalyzer/test/config/test/data/step4_ntuple_NonThDM_1000_GeV_run_65_v2.root";
+  mydataset["nonTh1TeV_66_v2"]="/lustre/scratch/sundleeb/CMSSW_7_4_0_pre6/src/MonoJetAnalysis/NtupleAnalyzer/test/config/test/data/step4_ntuple_NonThDM_1000_GeV_run_66_v2.root";
+  mydataset["nonTh1TeV_67_v2"]="/lustre/scratch/sundleeb/CMSSW_7_4_0_pre6/src/MonoJetAnalysis/NtupleAnalyzer/test/config/test/data/step4_ntuple_NonThDM_1000_GeV_run_67_v2.root";
+  mydataset["nonTh1TeV_68_v2"]="/lustre/scratch/sundleeb/CMSSW_7_4_0_pre6/src/MonoJetAnalysis/NtupleAnalyzer/test/config/test/data/step4_ntuple_NonThDM_1000_GeV_run_68_v2.root";
+  mydataset["nonTh1TeV_69_v2"]="/lustre/scratch/sundleeb/CMSSW_7_4_0_pre6/src/MonoJetAnalysis/NtupleAnalyzer/test/config/test/data/step4_ntuple_NonThDM_1000_GeV_run_69_v2.root";
+  mydataset["nonTh1TeV_70_v2"]="/lustre/scratch/sundleeb/CMSSW_7_4_0_pre6/src/MonoJetAnalysis/NtupleAnalyzer/test/config/test/data/step4_ntuple_NonThDM_1000_GeV_run_70_v2.root";
+  mydataset["nonTh1TeV_71_v2"]="/lustre/scratch/sundleeb/CMSSW_7_4_0_pre6/src/MonoJetAnalysis/NtupleAnalyzer/test/config/test/data/step4_ntuple_NonThDM_1000_GeV_run_71_v2.root";
+  mydataset["nonTh1TeV_72_v2"]="/lustre/scratch/sundleeb/CMSSW_7_4_0_pre6/src/MonoJetAnalysis/NtupleAnalyzer/test/config/test/data/step4_ntuple_NonThDM_1000_GeV_run_72_v2.root";
+  mydataset["nonTh1TeV_73_v2"]="/lustre/scratch/sundleeb/CMSSW_7_4_0_pre6/src/MonoJetAnalysis/NtupleAnalyzer/test/config/test/data/step4_ntuple_NonThDM_1000_GeV_run_73_v2.root";
+  mydataset["nonTh1TeV_74_v2"]="/lustre/scratch/sundleeb/CMSSW_7_4_0_pre6/src/MonoJetAnalysis/NtupleAnalyzer/test/config/test/data/step4_ntuple_NonThDM_1000_GeV_run_74_v2.root";
+  mydataset["nonTh1TeV_75_v2"]="/lustre/scratch/sundleeb/CMSSW_7_4_0_pre6/src/MonoJetAnalysis/NtupleAnalyzer/test/config/test/data/step4_ntuple_NonThDM_1000_GeV_run_75_v2.root";
+  mydataset["nonTh1TeV_76_v2"]="/lustre/scratch/sundleeb/CMSSW_7_4_0_pre6/src/MonoJetAnalysis/NtupleAnalyzer/test/config/test/data/step4_ntuple_NonThDM_1000_GeV_run_76_v2.root";
+  mydataset["nonTh1TeV_77_v2"]="/lustre/scratch/sundleeb/CMSSW_7_4_0_pre6/src/MonoJetAnalysis/NtupleAnalyzer/test/config/test/data/step4_ntuple_NonThDM_1000_GeV_run_77_v2.root";
+  mydataset["nonTh1TeV_79_v2"]="/lustre/scratch/sundleeb/CMSSW_7_4_0_pre6/src/MonoJetAnalysis/NtupleAnalyzer/test/config/test/data/step4_ntuple_NonThDM_1000_GeV_run_79_v2.root";
+  mydataset["nonTh1TeV_80_v2"]="/lustre/scratch/sundleeb/CMSSW_7_4_0_pre6/src/MonoJetAnalysis/NtupleAnalyzer/test/config/test/data/step4_ntuple_NonThDM_1000_GeV_run_80_v2.root";
+  mydataset["nonTh1TeV_81_v2"]="/lustre/scratch/sundleeb/CMSSW_7_4_0_pre6/src/MonoJetAnalysis/NtupleAnalyzer/test/config/test/data/step4_ntuple_NonThDM_1000_GeV_run_81_v2.root";
+  mydataset["nonTh1TeV_82_v2"]="/lustre/scratch/sundleeb/CMSSW_7_4_0_pre6/src/MonoJetAnalysis/NtupleAnalyzer/test/config/test/data/step4_ntuple_NonThDM_1000_GeV_run_82_v2.root";
+  mydataset["nonTh1TeV_83_v2"]="/lustre/scratch/sundleeb/CMSSW_7_4_0_pre6/src/MonoJetAnalysis/NtupleAnalyzer/test/config/test/data/step4_ntuple_NonThDM_1000_GeV_run_83_v2.root";
+  mydataset["nonTh1TeV_84_v2"]="/lustre/scratch/sundleeb/CMSSW_7_4_0_pre6/src/MonoJetAnalysis/NtupleAnalyzer/test/config/test/data/step4_ntuple_NonThDM_1000_GeV_run_84_v2.root";
+  mydataset["nonTh1TeV_85_v2"]="/lustre/scratch/sundleeb/CMSSW_7_4_0_pre6/src/MonoJetAnalysis/NtupleAnalyzer/test/config/test/data/step4_ntuple_NonThDM_1000_GeV_run_85_v2.root";
+  mydataset["nonTh1TeV_86_v2"]="/lustre/scratch/sundleeb/CMSSW_7_4_0_pre6/src/MonoJetAnalysis/NtupleAnalyzer/test/config/test/data/step4_ntuple_NonThDM_1000_GeV_run_86_v2.root";
+  mydataset["nonTh1TeV_87_v2"]="/lustre/scratch/sundleeb/CMSSW_7_4_0_pre6/src/MonoJetAnalysis/NtupleAnalyzer/test/config/test/data/step4_ntuple_NonThDM_1000_GeV_run_87_v2.root";
+  mydataset["nonTh1TeV_88_v2"]="/lustre/scratch/sundleeb/CMSSW_7_4_0_pre6/src/MonoJetAnalysis/NtupleAnalyzer/test/config/test/data/step4_ntuple_NonThDM_1000_GeV_run_88_v2.root";
+  mydataset["nonTh1TeV_89_v2"]="/lustre/scratch/sundleeb/CMSSW_7_4_0_pre6/src/MonoJetAnalysis/NtupleAnalyzer/test/config/test/data/step4_ntuple_NonThDM_1000_GeV_run_89_v2.root";
+  mydataset["nonTh1TeV_90_v2"]="/lustre/scratch/sundleeb/CMSSW_7_4_0_pre6/src/MonoJetAnalysis/NtupleAnalyzer/test/config/test/data/step4_ntuple_NonThDM_1000_GeV_run_90_v2.root";
+  mydataset["nonTh1TeV_91_v2"]="/lustre/scratch/sundleeb/CMSSW_7_4_0_pre6/src/MonoJetAnalysis/NtupleAnalyzer/test/config/test/data/step4_ntuple_NonThDM_1000_GeV_run_91_v2.root";
+  mydataset["nonTh1TeV_92_v2"]="/lustre/scratch/sundleeb/CMSSW_7_4_0_pre6/src/MonoJetAnalysis/NtupleAnalyzer/test/config/test/data/step4_ntuple_NonThDM_1000_GeV_run_92_v2.root";
+  mydataset["nonTh1TeV_93_v2"]="/lustre/scratch/sundleeb/CMSSW_7_4_0_pre6/src/MonoJetAnalysis/NtupleAnalyzer/test/config/test/data/step4_ntuple_NonThDM_1000_GeV_run_93_v2.root";
+  mydataset["nonTh1TeV_94_v2"]="/lustre/scratch/sundleeb/CMSSW_7_4_0_pre6/src/MonoJetAnalysis/NtupleAnalyzer/test/config/test/data/step4_ntuple_NonThDM_1000_GeV_run_94_v2.root";
+  mydataset["nonTh1TeV_95_v2"]="/lustre/scratch/sundleeb/CMSSW_7_4_0_pre6/src/MonoJetAnalysis/NtupleAnalyzer/test/config/test/data/step4_ntuple_NonThDM_1000_GeV_run_95_v2.root";
+  mydataset["nonTh1TeV_96_v2"]="/lustre/scratch/sundleeb/CMSSW_7_4_0_pre6/src/MonoJetAnalysis/NtupleAnalyzer/test/config/test/data/step4_ntuple_NonThDM_1000_GeV_run_96_v2.root";
+  mydataset["nonTh1TeV_97_v2"]="/lustre/scratch/sundleeb/CMSSW_7_4_0_pre6/src/MonoJetAnalysis/NtupleAnalyzer/test/config/test/data/step4_ntuple_NonThDM_1000_GeV_run_97_v2.root";
+  mydataset["nonTh1TeV_98_v2"]="/lustre/scratch/sundleeb/CMSSW_7_4_0_pre6/src/MonoJetAnalysis/NtupleAnalyzer/test/config/test/data/step4_ntuple_NonThDM_1000_GeV_run_98_v2.root";
+  mydataset["nonTh1TeV_99_v2"]="/lustre/scratch/sundleeb/CMSSW_7_4_0_pre6/src/MonoJetAnalysis/NtupleAnalyzer/test/config/test/data/step4_ntuple_NonThDM_1000_GeV_run_99_v2.root";
+  mydataset["nonTh1TeV_100_v2"]="/lustre/scratch/sundleeb/CMSSW_7_4_0_pre6/src/MonoJetAnalysis/NtupleAnalyzer/test/config/test/data/step4_ntuple_NonThDM_1000_GeV_run_100_v2.root";
+
+
+
+  mydataset["DM_MJ_M_100_AV_local"]="/lustre/hep/ccowden/CMSMonojet/NtupleMaker/ntuples/DarkMatter_Monojet_M_100_AV_local.root";
+
+  mydataset["DM_MJ_M_1000_AV"]="/lustre/hep/ccowden/CMSMonojet/NtupleMaker/ntuples/ntuple_DarkMatter_Monojet_M-1000_AV.root";
+
+  mydataset["DM_MJ_M_1000_V"]="/lustre/hep/ccowden/CMSMonojet/NtupleMaker/ntuples/ntuple_DarkMatter_Monojet_M-1000_V.root";
+
+  mydataset["DM_MJ_M_100_AV"]="/lustre/hep/ccowden/CMSMonojet/NtupleMaker/ntuples/ntuple_DarkMatter_Monojet_M-100_AV.root";
+
+  mydataset["DM_MJ_M_100_V"]="/lustre/hep/ccowden/CMSMonojet/NtupleMaker/ntuples/ntuple_DarkMatter_Monojet_M-100_V.root";
+
+  mydataset["DM_MonoJet_M_10_AV"]="/lustre/hep/ccowden/CMSMonojet/NtupleMaker/ntuples/ntuple_DarkMatter_Monojet_M-10_AV.root";
+
+  mydataset["DM_MonoJet_M_10_V"]="/lustre/hep/ccowden/CMSMonojet/NtupleMaker/ntuples/ntuple_DarkMatter_Monojet_M-10_V.root";
+
+  mydataset["DM_MonoJet_M_1_AV"]="/lustre/hep/ccowden/CMSMonojet/NtupleMaker/ntuples/ntuple_DarkMatter_Monojet_M-1_AV.root";
+
+    mylumi["DM_MonoJet_M_10_V"] =   189400./100.8;
+    mylumi["DM_MonoJet_M_10_AV"] =  191200./100.8;
+
+    mylumi["nonth1TeVrun34"]=1000./0.12579;
+    mylumi["nonth2TeVrun34"]=1000./0.004047;
+    mylumi["nonth2TeVrun56"]=1000./0.14791;
+    mylumi["nonth3TeVrun34"]=1000./0.00036545;
+    mylumi["nonth3TeVrun56"]=1000./0.039131;
+    mylumi["nonth0.5TeVrun34"]=1000./2.2038;
+    mylumi["nonth0.5TeVrun56"]=1000./55.442;
+    mylumi["nonth1TeV1"]=1000./0.0050967;
+    mylumi["nonth1TeV2"]=1000./0.041742;
+    mylumi["nonth1TeV3"]=1000./0.050159;
+    mylumi["nonth1TeV4"]=1000./23.387;
+
+    mylumi["nonth1TeVrun34v2"]=1000./0.12567;
+    mylumi["nonth1TeVrun56v2"]=1000./3.2919;
+    mylumi["nonth2TeVrun34v2"]=1000./0.0004843;
+    mylumi["nonth2TeVrun56v2"]=1000./0.015857;
+    mylumi["nonth3TeVrun34v2"]=1000./0.00032621;
+    mylumi["nonth3TeVrun56v2"]=1000./0.012849;
+    mylumi["nonth0.5TeVrun34v2"]=1000./2.2091;
+    mylumi["nonth0.5TeVrun56v2"]=1000./55.267;
+
+    mylumi["nonTh1TeV_01_v2"]=1000./0.0014597;
+    mylumi["nonTh1TeV_02_v2"]=1000./0.003342;
+    mylumi["nonTh1TeV_03_v2"]=1000./0.005098;
+    mylumi["nonTh1TeV_04_v2"]=1000./0.005565;
+    mylumi["nonTh1TeV_05_v2"]=1000./0.005910;
+    mylumi["nonTh1TeV_06_v2"]=1000./0.008296;
+    mylumi["nonTh1TeV_07_v2"]=1000./0.028019;
+    mylumi["nonTh1TeV_08_v2"]=1000./0.30176;
+    mylumi["nonTh1TeV_09_v2"]=1000./7.7655;
+    mylumi["nonTh1TeV_10_v2"]=1000./33.838;
+    mylumi["nonTh1TeV_11_v2"]=1000./0.0016958;
+    mylumi["nonTh1TeV_12_v2"]=1000./0.0052204;
+    mylumi["nonTh1TeV_13_v2"]=1000./0.012472;
+    mylumi["nonTh1TeV_14_v2"]=1000./0.01561;
+    mylumi["nonTh1TeV_15_v2"]=1000./0.01687;
+    mylumi["nonTh1TeV_16_v2"]=1000./0.019811;
+    mylumi["nonTh1TeV_17_v2"]=1000./0.04037;
+    mylumi["nonTh1TeV_18_v2"]=1000./0.31300;
+    mylumi["nonTh1TeV_19_v2"]=1000./7.8286;
+    mylumi["nonTh1TeV_20_v2"]=1000./34.837;
+    mylumi["nonTh1TeV_21_v2"]=1000./0.0018434;
+    mylumi["nonTh1TeV_22_v2"]=1000./0.0069735;
+    mylumi["nonTh1TeV_23_v2"]=1000./0.031592;
+    mylumi["nonTh1TeV_24_v2"]=1000./0.063548;
+    mylumi["nonTh1TeV_25_v2"]=1000./0.085514;
+    mylumi["nonTh1TeV_26_v2"]=1000./0.098009;
+    mylumi["nonTh1TeV_27_v2"]=1000./0.12401;
+    mylumi["nonTh1TeV_28_v2"]=1000./0.4106;
+    mylumi["nonTh1TeV_29_v2"]=1000./7.9025;
+    mylumi["nonTh1TeV_30_v2"]=1000./34.299;
+    mylumi["nonTh1TeV_31_v2"]=1000./0.0018729;
+    mylumi["nonTh1TeV_32_v2"]=1000./0.0073871;
+    mylumi["nonTh1TeV_33_v2"]=1000./0.041908;
+    mylumi["nonTh1TeV_34_v2"]=1000./0.12567;
+    mylumi["nonTh1TeV_35_v2"]=1000./0.25236;
+    mylumi["nonTh1TeV_36_v2"]=1000./0.35828;
+    mylumi["nonTh1TeV_37_v2"]=1000./0.41531;
+    mylumi["nonTh1TeV_38_v2"]=1000./0.74525;
+    mylumi["nonTh1TeV_39_v2"]=1000./8.0081;
+    mylumi["nonTh1TeV_40_v2"]=1000./33.682;
+    mylumi["nonTh1TeV_41_v2"]=1000./0.0018847;
+    mylumi["nonTh1TeV_42_v2"]=1000./0.0074999;
+    mylumi["nonTh1TeV_44_v2"]=1000./0.16809;
+    mylumi["nonTh1TeV_45_v2"]=1000./0.50567;
+    mylumi["nonTh1TeV_46_v2"]=1000./1.1674;
+    mylumi["nonTh1TeV_48_v2"]=1000./2.0663;
+    mylumi["nonTh1TeV_49_v2"]=1000./8.8381;
+    mylumi["nonTh1TeV_50_v2"]=1000./34.491;
+    mylumi["nonTh1TeV_51_v2"]=1000./0.0019394;
+    mylumi["nonTh1TeV_52_v2"]=1000./0.0077688;
+    mylumi["nonTh1TeV_53_v2"]=1000./0.048299;
+    mylumi["nonTh1TeV_54_v2"]=1000./0.19080;
+    mylumi["nonTh1TeV_55_v2"]=1000./0.72101;
+    mylumi["nonTh1TeV_56_v2"]=1000./3.2919;
+    mylumi["nonTh1TeV_57_v2"]=1000./6.8721;
+    mylumi["nonTh1TeV_58_v2"]=1000./10.452;
+    mylumi["nonTh1TeV_59_v2"]=1000./15.930;
+    mylumi["nonTh1TeV_60_v2"]=1000./33.595;
+    mylumi["nonTh1TeV_61_v2"]=1000./0.0021101;
+    mylumi["nonTh1TeV_62_v2"]=1000./0.0084426;
+    mylumi["nonTh1TeV_63_v2"]=1000./0.052742;
+    mylumi["nonTh1TeV_64_v2"]=1000./0.20995;
+    mylumi["nonTh1TeV_65_v2"]=1000./0.82855;
+    mylumi["nonTh1TeV_66_v2"]=1000./4.7427;
+    mylumi["nonTh1TeV_67_v2"]=1000./14.652;
+    mylumi["nonTh1TeV_68_v2"]=1000./31.533;
+    mylumi["nonTh1TeV_69_v2"]=1000./37.605;
+    mylumi["nonTh1TeV_70_v2"]=1000./44.006;
+    mylumi["nonTh1TeV_71_v2"]=1000./0.0023811;    
+    mylumi["nonTh1TeV_72_v2"]=1000./0.0095567;
+    mylumi["nonTh1TeV_73_v2"]=1000./0.059733;
+    mylumi["nonTh1TeV_74_v2"]=1000./0.23862;
+    mylumi["nonTh1TeV_75_v2"]=1000./0.94736;
+    mylumi["nonTh1TeV_76_v2"]=1000./5.7755;
+    mylumi["nonTh1TeV_77_v2"]=1000./21.207;
+    mylumi["nonTh1TeV_79_v2"]=1000./92.916;
+    mylumi["nonTh1TeV_80_v2"]=1000./66.123;
+    mylumi["nonTh1TeV_81_v2"]=1000./0.0010765;
+    mylumi["nonTh1TeV_82_v2"]=1000./0.0043000;
+    mylumi["nonTh1TeV_83_v2"]=1000./0.026941;
+    mylumi["nonTh1TeV_84_v2"]=1000./0.10761;
+    mylumi["nonTh1TeV_85_v2"]=1000./0.42813;
+    mylumi["nonTh1TeV_86_v2"]=1000./2.6642;
+    mylumi["nonTh1TeV_87_v2"]=1000./10.405;
+    mylumi["nonTh1TeV_88_v2"]=1000./37.581;
+    mylumi["nonTh1TeV_89_v2"]=1000./126.33;
+    mylumi["nonTh1TeV_90_v2"]=1000./141.96;
+    mylumi["nonTh1TeV_91_v2"]=1000./0.00030219;
+    mylumi["nonTh1TeV_92_v2"]=1000./0.0012021;
+    mylumi["nonTh1TeV_93_v2"]=1000./0.0076614;
+    mylumi["nonTh1TeV_94_v2"]=1000./0.030580;
+    mylumi["nonTh1TeV_95_v2"]=1000./0.12239;
+    mylumi["nonTh1TeV_96_v2"]=1000./0.75724;
+    mylumi["nonTh1TeV_97_v2"]=1000./3.0574;
+    mylumi["nonTh1TeV_98_v2"]=1000./11.879;
+    mylumi["nonTh1TeV_99_v2"]=1000./61.650;
+    mylumi["nonTh1TeV_100_v2"]=1000./138.56;
+
+
+  // Phys14DR
+  mydataset["py14Znunu100"] = "file:/lustre/hep/ccowden/CMSMonojet/NtupleMaker/ntuples/ntuple_ZJetsToNuNu_HT_100to200.root";
+  mydataset["py14Znunu200"] = "file:/lustre/hep/ccowden/CMSMonojet/NtupleMaker/ntuples/ntuple_ZJetsToNuNu_HT_200to400.root";
+  mydataset["py14Znunu400"] = "file:/lustre/hep/ccowden/CMSMonojet/NtupleMaker/ntuples/ntuple_ZJetsToNuNu_HT_400to600.root";
+  mydataset["py14Znunu600"] = "file:/lustre/hep/ccowden/CMSMonojet/NtupleMaker/ntuples/ntuple_ZJetsToNuNu_HT_600toInf.root";
+  // mydataset["py14Znunu600"] = "file:
+  mylumi["py14Znunu100"] =  4986424./372.6;
+  mylumi["py14Znunu200"] =  4546470./100.8;
+  mylumi["py14Znunu400"] =  4432800./11.99;
+  mylumi["py14Znunu600"] =  4463806./4.113;
+  // mylumi["py14Znunu600"] =
+
+  mydataset["py14Wjet100"] = "file:/lustre/hep/ccowden/CMSMonojet/NtupleMaker/ntuples/ntuple_WJetsToLN_HT_100to200.root";
+  mydataset["py14Wjet200"] = "file:/lustre/hep/ccowden/CMSMonojet/NtupleMaker/ntuples/ntuple_WJetsToLN_HT_200to400.root";
+  mydataset["py14Wjet400"] = "file:/lustre/hep/ccowden/CMSMonojet/NtupleMaker/ntuples/ntuple_WJetsToLN_HT_400to600.root";
+  mydataset["py14Wjet600"] = "file:/lustre/hep/ccowden/CMSMonojet/NtupleMaker/ntuples/ntuple_WJetsToLN_HT_600toInf.root";
+  mylumi["py14Wjet100"] =  5262265./1817.;
+  mylumi["py14Wjet200"] =  4936077./471.6;
+  mylumi["py14Wjet400"] =  4640594./55.61;
+  mylumi["py14Wjet600"] =  4581841./18.81;
+
+
+
 
 
 
@@ -312,7 +613,7 @@ EventData::EventData(const string &  fileName, UInt_t maxEvents, int isMC) : mDa
   mylumi["dmav100new"]          = 19712.;
   mylumi["dmav100newJet1"]      = 19712.;  
   
-  TFile f1( mydataset["pileup"].c_str()  );
+  /*TFile f1( mydataset["pileup"].c_str()  );
   TH1D *his = (TH1D*) f1.Get("pileup")->Clone();
 
   std::string myFileName = mydataset[fileName].c_str();
@@ -338,7 +639,7 @@ EventData::EventData(const string &  fileName, UInt_t maxEvents, int isMC) : mDa
     }
     puVersion = 0;
   }
-  mPileUpWeights = generate_flat10_weights(his,puVersion);
+  mPileUpWeights = generate_flat10_weights(his,puVersion);*/
   
   //setPDFPath("/uscmst1/prod/sw/cms/slc5_amd64_gcc434/external/lhapdf/5.6.0-cms4/share/lhapdf/PDFsets");
   //initPDFSet(1, "cteq66.LHgrid");
@@ -1111,15 +1412,15 @@ Double_t        EventData::PFAK4JetSigPhi(UInt_t id)                         {  
 Double_t        EventData::PFAK4JetIDEmf(UInt_t id)                          {   return  mPFAK4JetIDEmf[id];                       }
 Double_t        EventData::PFAK4JetECor(UInt_t id)                           {   return  mPFAK4JetECor[id];                        }
 
-// Double_t        EventData::PFAK4JetPtCor(UInt_t id)                          {   return  mPFAK4JetPtCor[id];                       }
-// Double_t        EventData::PFAK4JetPxCor(UInt_t id)                          {   return  mPFAK4JetPxCor[id];                       }
-// Double_t        EventData::PFAK4JetPyCor(UInt_t id)                          {   return  mPFAK4JetPyCor[id];                       }
-// Double_t        EventData::PFAK4JetPzCor(UInt_t id)                          {   return  mPFAK4JetPzCor[id];                       }
+ Double_t        EventData::PFAK4JetPtCor(UInt_t id)                          {   return  mPFAK4JetPtCor[id];                       }
+ Double_t        EventData::PFAK4JetPxCor(UInt_t id)                          {   return  mPFAK4JetPxCor[id];                       }
+ Double_t        EventData::PFAK4JetPyCor(UInt_t id)                          {   return  mPFAK4JetPyCor[id];                       }
+ Double_t        EventData::PFAK4JetPzCor(UInt_t id)                          {   return  mPFAK4JetPzCor[id];                       }
 
-Double_t        EventData::PFAK4JetPtCor(UInt_t id)                     {    return  mPFAK4JetPtCor[id] * (1+ mEnergyScale*mPFAK4uncer[id] );      } 
-Double_t        EventData::PFAK4JetPxCor(UInt_t id)                     {    return  mPFAK4JetPxCor[id] * (1+ mEnergyScale*mPFAK4uncer[id] );      } 
-Double_t        EventData::PFAK4JetPyCor(UInt_t id)                     {    return  mPFAK4JetPyCor[id] * (1+ mEnergyScale*mPFAK4uncer[id] );      }
-Double_t        EventData::PFAK4JetPzCor(UInt_t id)                     {    return  mPFAK4JetPzCor[id] * (1+ mEnergyScale*mPFAK4uncer[id] );      }
+//Double_t        EventData::PFAK4JetPtCor(UInt_t id)                     {    return  mPFAK4JetPtCor[id] * (1+ mEnergyScale*mPFAK4uncer[id] );      } 
+//Double_t        EventData::PFAK4JetPxCor(UInt_t id)                     {    return  mPFAK4JetPxCor[id] * (1+ mEnergyScale*mPFAK4uncer[id] );      } 
+//Double_t        EventData::PFAK4JetPyCor(UInt_t id)                     {    return  mPFAK4JetPyCor[id] * (1+ mEnergyScale*mPFAK4uncer[id] );      }
+//Double_t        EventData::PFAK4JetPzCor(UInt_t id)                     {    return  mPFAK4JetPzCor[id] * (1+ mEnergyScale*mPFAK4uncer[id] );      }
 
 
 
@@ -1145,7 +1446,7 @@ Int_t           EventData::PFAK4JetNumOfChaHad(UInt_t id)                    {  
 Int_t           EventData::PFAK4JetNumOfDaughters(UInt_t id)                 {   return  mPFAK4JetNumOfDaughters[id];              }
 Int_t           EventData::PFAK4JetIDLOOSE(UInt_t id)                        {   return  mPFAK4JetIDLOOSE[id];                     }
 Int_t           EventData::PFAK4JetIDTIGHT(UInt_t id)                        {   return  mPFAK4JetIDTIGHT[id];                     }
-Int_t           EventData::PFAK4JetPUFullJetId(UInt_t id)                    {   return  mPFAK4JetPUFullJetId[id];                 }
+Double_t           EventData::PFAK4JetPUFullJetId(UInt_t id)                    {   return  mPFAK4JetPUFullJetId[id];                 }
 Double_t        EventData::PFAK4uncer(UInt_t id)                             {   return  mPFAK4uncer[id];                          }						
 						
 Int_t           EventData::NMet()                                            {   return  mNMet;                                    }

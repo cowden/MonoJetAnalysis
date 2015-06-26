@@ -30,6 +30,7 @@ namespace Operation
   
   double  MetLepPhi(double MetPx , double MetPy , EventData & eventData);
 
+  bool    JetPuId( int ind, EventData & eventData);
   int     JetIndex(int ind , EventData & eventData); 
   int     WideJetIndex(int ind , EventData & eventData);
   
@@ -131,6 +132,18 @@ namespace Operation
     double mRun;
     double mLumi;
     double mEvent;
+  };
+
+
+  // ---------------------- Good Vertex Cut -------------------------
+  class GoodVertexCut : public Operation::_Base
+  {
+  public:
+    GoodVertexCut() { }
+    ~GoodVertexCut() { }
+
+    bool Process(EventData & eventData);
+    std::ostream& Description(std::ostream& ostrm);
   };
 
   

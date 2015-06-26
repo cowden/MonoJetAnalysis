@@ -127,7 +127,7 @@ class EventData
   Int_t           PFAK4JetNumOfDaughters(UInt_t id);    
   Int_t           PFAK4JetIDLOOSE(UInt_t id);    
   Int_t           PFAK4JetIDTIGHT(UInt_t id);
-  Int_t           PFAK4JetPUFullJetId(UInt_t id); 
+  Double_t           PFAK4JetPUFullJetId(UInt_t id); 
   Double_t        PFAK4uncer(UInt_t id);
   
   Int_t           NMet();
@@ -716,7 +716,7 @@ class EventData
   Int_t           mPFAK4JetNumOfDaughters[MAXJET];    
   Int_t           mPFAK4JetIDLOOSE[MAXJET];    
   Int_t           mPFAK4JetIDTIGHT[MAXJET];
-  Int_t           mPFAK4JetPUFullJetId[MAXJET];
+  Double_t           mPFAK4JetPUFullJetId[MAXJET];
   Double_t        mPFAK4uncer[MAXJET];
   
   Int_t           mNMet;

@@ -93,10 +93,11 @@ int main(int argc, char ** argv)
   manager.Add(&DataMcMatching0);
   
   
-  CutMet CMet(200); 
+/*  CutMet CMet(200); 
   manager.Add(&CMet);
   hDataMcMatching DataMcMatching1(histFile+"_AnaMonoJet_1.root"); 
   manager.Add(&DataMcMatching1);
+*/
   
   //    drop noise cleaning    s.kunori  11-Feb-2015
   // CutNoiseClean CNoiseClean( 0.95 , 0.98, 1,  0.01, 0.99); 
@@ -129,9 +130,15 @@ int main(int argc, char ** argv)
   */
   hDataMcMatching DataMcMatching2(histFile+"_AnaMonoJet_2.root"); 
   manager.Add(&DataMcMatching2);
+
+  // ------------------------------------------------------------
+  // Beginning of the analysis cuts
+  GoodVertexCut gvc;
+  manager.Add(&gvc);
+  hDataMcMatching DataMcMatchingGV(histFile+"_AnaMonoJet_GV.root");
+  manager.Add(&DataMcMatchingGV); 
   
-  
-  CutJet1 CJet1(110 , 2.4,  0.02, 0.98); 
+  CutJet1 CJet1(110 , 2.5,  0.02, 0.98); 
   manager.Add(&CJet1);
   //CutJet2 CJet20(30,4.7);
   //manager.Add(&CJet20);
@@ -141,11 +148,11 @@ int main(int argc, char ** argv)
   manager.Add(&HLTEff1);
   
   
-  CutNJet CNJet(3);
-  manager.Add(&CNJet);
+/*  CutNJet CNJet(3);
+  //manager.Add(&CNJet);
   hDataMcMatching DataMcMatching4(histFile+"_AnaMonoJet_4.root"); 
   manager.Add(&DataMcMatching4);
-  
+*/  
   
   CutDeltaPhi3 CDeltaPhi3(2.5);
   manager.Add(&CDeltaPhi3);
@@ -153,7 +160,18 @@ int main(int argc, char ** argv)
   manager.Add(&DataMcMatching5);
   hHLTEff  HLTEff2(histFile+"_HLTEff2.root");
   manager.Add(&HLTEff2);
-  
+
+
+  CutMet CMet(200);
+  manager.Add(&CMet);
+  hDataMcMatching DataMcMatching1(histFile+"_AnaMonoJet_1.root");
+  manager.Add(&DataMcMatching1);  
+
+
+  CutNJet CNJet(3);
+  manager.Add(&CNJet);
+  hDataMcMatching DataMcMatching4(histFile+"_AnaMonoJet_4.root");
+  manager.Add(&DataMcMatching4);
   
   NoPFMuon CNoPFMuon(10., 66.);
   manager.Add(&CNoPFMuon); // no cut on eta
