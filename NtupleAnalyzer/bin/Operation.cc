@@ -631,6 +631,7 @@ namespace Operation
   /// ------------------------------------------------
   /// Return Jet PuId valuation for the ith jet
   /// Apply eta dependent cuts to PFAK4JetsPUFullJetId
+  /// The PUFullJetId variable should vary between -1 and 1
   bool JetPuId(int ind, EventData & ev) {
     const double jeta = fabs(ev.PFAK4JetEta(ind));
     const double jpu = ev.PFAK4JetPUFullJetId(ind);

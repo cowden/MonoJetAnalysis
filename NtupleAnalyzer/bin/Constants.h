@@ -20,7 +20,7 @@ using namespace std;
 namespace Constants 
 {
   // string outputDir    = "/afs/cern.ch/work/s/srimanob/Monojet/Production/Ver07B/CMSSW_7_2_3/src/MonoJetAnalysis/NtupleAnalyzer/";
-  string outputDir    = "/home/sundleeb/DM15ana/CMSSW_7_4_0_pre6/src/MonoJetAnalysis/NtupleAnalyzer/";
+  string outputDir    = "/media/sf_proj/Monojets/cmsdev/CMSSW_7_4_1/src/MonoJetAnalysis/NtupleAnalyzer/";
   string condorOutDir = "/uscmst1b_scratch/lpc1/DayLifetime/vergili/condor/"; 
   string condorBin    = "/uscms_data/d2/vergili/sep/CMSSW_5_3_4_cand1/bin/slc5_amd64_gcc462/"; 
 }
